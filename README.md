@@ -13,7 +13,11 @@ Now, for the second part, the sprite is supposed to have the same coordinates as
 _In green, the mouse coordinates (with offset to center) and in blue, the coordinates converted to the unit circle_  
 ## Result
 
-_[GIF of demo]_
+
+https://github.com/tulubibibotonumpotumtumz/GodotCircularMovement/assets/128854003/7114b132-66ee-4c11-a3ca-feaf644e842a  
+_It wasn't recorded properly but whatever_
+
+
 [Sprites credit](https://helianthus-games.itch.io/pixel-art-planets)
 ### Notes
 I tried to be more concise in this explanation because there is no point in going into details because I probably don't know enough to do so and it's longer to make as well.
