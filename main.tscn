@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnhmpfpsb21su"]
+
+[ext_resource type="Texture2D" uid="uid://crtgc72lim1au" path="res://Terran.png" id="1_hyg85"]
+[ext_resource type="Script" path="res://mouse_follow.gd" id="2_61w8l"]
+[ext_resource type="Texture2D" uid="uid://bkqvehncdteyj" path="res://Baren.png" id="3_uxekk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Center" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_hyg85")
+script = ExtResource("2_61w8l")
+metadata/_edit_group_ = true
+
+[node name="following" type="Sprite2D" parent="."]
+position = Vector2(188, 276)
+texture = ExtResource("3_uxekk")

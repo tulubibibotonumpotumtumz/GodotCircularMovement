@@ -1,0 +1,7 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1704782094
+Baren.png::CompressedTexture2D::3122621752003637137::1704781693::1704781694::1::::<><>::
+icon.svg::CompressedTexture2D::7142812900162260671::1704515927::1704515935::1::::<><>::
+main.tscn::PackedScene::3314081972696794312::1704781889::0::1::::<><>::uid://crtgc72lim1au::::res://Terran.png<>res://mouse_follow.gd<>uid://bkqvehncdteyj::::res://Baren.png
+mouse_follow.gd::GDScript::-1::1704781222::0::1::::<>Sprite2D<>::
+Terran.png::CompressedTexture2D::6005644483072202876::1704781527::1704781528::1::::<><>::
