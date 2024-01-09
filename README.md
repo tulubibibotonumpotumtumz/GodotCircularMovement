@@ -16,6 +16,6 @@ _[image of right triangle and formulas used]_
 ## Result
 
 _[GIF of demo]_
-
+[Sprites credit](https://helianthus-games.itch.io/pixel-art-planets)
 ### Notes
 I tried to be more concise in this explanation because there is no point in going into details because I probably don't know enough to do so and it's longer to make as well.
