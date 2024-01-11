@@ -44,6 +44,11 @@ func _process(delta):
 	dist_center = max(1, sqrt(mouse_x**2 + mouse_y**2)) #thanks Pythagora :)
 	following.position.x = Px+(coef*mouse_x/dist_center)
 	following.position.y = Py-(coef*mouse_y/dist_center)
+	if mouse_y < 0:
+		following.rotation = 2*PI - acos((mouse_y**2 - mouse_x**2 - dist_center**2)/(2*dist_center*(mouse_x if mouse_x != 0 else 1)))
+	else:
+		following.rotation = acos((mouse_y**2 - mouse_x**2 - dist_center**2)/(2*dist_center*(mouse_x if mouse_x != 0 else 1)))
+	
 	
 	
 	
