@@ -18,4 +18,4 @@ _In green, the mouse coordinates (with offset to center) and in blue, the coordi
 
 [Sprites credit](https://helianthus-games.itch.io/pixel-art-planets)
 ### Notes
-I tried to be more concise in this explanation because there is no point in going into details because I probably don't know enough to do so and it's longer to make as well.
+One detail I haven't talked about is keeping the moon always facing the planet. I changed the orientation by finding the angle theta with arcos since I had all the measures for the sides of the triangle but not the angle (law of cosines). I just checked if y became negative and substracted the the angle from 360° if it's the case.
