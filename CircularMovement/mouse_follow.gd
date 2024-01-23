@@ -2,10 +2,13 @@ extends Sprite2D
 #Sprite's position used as a center relative to the mouse position
 var Px = 0
 var Py = 0
+var launched = false
+var tex = preload("res://icon.svg")
 #following variables
 @onready var following = get_node("../following")
-
-
+#offset to replace sprite
+var sprite_offset = PI/2
+var projectile = Sprite2D.new()
 #window variables
 var win_size
 var screen_width
@@ -24,7 +27,13 @@ func _ready():
 	following.position.x = Px
 	following.position.y = Py
 	print(screen_width, " ", screen_height)
+	projectile.set_texture(tex)
 	
+
+func shoot():
+	#projectile
+	pass
+
 #mouse variables
 var mouse_pos
 var mouse_x
@@ -45,10 +54,17 @@ func _process(delta):
 	following.position.x = Px+(coef*mouse_x/dist_center)
 	following.position.y = Py-(coef*mouse_y/dist_center)
 	if mouse_y < 0:
-		following.rotation = 2*PI - acos((mouse_y**2 - mouse_x**2 - dist_center**2)/(2*dist_center*(mouse_x if mouse_x != 0 else 1)))
+		following.rotation = 2*PI - (acos((mouse_y**2 - mouse_x**2 - dist_center**2)/(2*dist_center*(mouse_x if mouse_x != 0 else 1)))+sprite_offset)
 	else:
-		following.rotation = acos((mouse_y**2 - mouse_x**2 - dist_center**2)/(2*dist_center*(mouse_x if mouse_x != 0 else 1)))
+		following.rotation = acos((mouse_y**2 - mouse_x**2 - dist_center**2)/(2*dist_center*(mouse_x if mouse_x != 0 else 1))) - sprite_offset
 	
-	
+	#instanciation of projectiles
+	if Input.is_action_just_pressed("ui_accept") and not launched:
+		launched = true
+		print("Hey")
+		add_child(projectile)
+		projectile.position.x = Px+100
+		projectile.position.y = Py+100
+		shoot()
 	
 	
